@@ -4,8 +4,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var themes = data.themes || {};
   var works = data.works || {};
-  var connections = data.connections || {};
-  var pairIndex = data.pairIndex || {};
+  var pairConnections = data.pairConnections || {};
 
   var leftSelect = document.getElementById("work-left");
   var rightSelect = document.getElementById("work-right");
@@ -68,10 +67,10 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   function getPairConnection(leftId, rightId) {
-    var leftMap = pairIndex[leftId] || {};
-    var connectionId = leftMap[rightId];
+    var firstId = Math.min(Number(leftId), Number(rightId));
+    var secondId = Math.max(Number(leftId), Number(rightId));
 
-    return connectionId ? connections[connectionId] : null;
+    return pairConnections[firstId + "-" + secondId] || null;
   }
 
   function buildFallbackText(leftWork, rightWork) {
