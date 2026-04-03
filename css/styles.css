@@ -86,8 +86,8 @@ body::before {
 
 .bridge {
   display: grid;
-  place-items: center;
-  padding: clamp(16px, 3vw, 34px);
+  place-items: center stretch;
+  padding: clamp(16px, 2vw, 24px);
   background:
     linear-gradient(180deg, rgba(16, 24, 43, 0.98) 0%, rgba(10, 15, 29, 0.98) 100%);
   border-color: var(--line-strong);
@@ -168,7 +168,8 @@ body::before {
 }
 
 .connection-text {
-  max-width: 24ch;
+  width: 100%;
+  max-width: none;
   font-size: clamp(1.15rem, 1.2vw + 0.95rem, 2.2rem);
   line-height: 1.28;
   text-align: center;
