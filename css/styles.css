@@ -50,11 +50,19 @@ body::before {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr) minmax(0, 1fr);
+  grid-template-columns: minmax(280px, 0.5fr) minmax(0, 1fr);
   gap: clamp(8px, 1.8vw, 22px);
   width: 100%;
   height: 100dvh;
   padding: clamp(8px, 1.8vw, 22px);
+}
+
+.works-column {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(8px, 1.8vw, 22px);
 }
 
 .side,
@@ -174,8 +182,15 @@ body::before {
 
 @media (max-width: 780px) {
   .stage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     gap: 8px;
     padding: 8px;
+  }
+
+  .works-column {
+    grid-template-rows: repeat(2, minmax(180px, auto));
+    gap: 8px;
   }
 
   .side,

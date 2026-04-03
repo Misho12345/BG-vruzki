@@ -11,30 +11,32 @@
 </head>
 <body>
   <main class="stage">
-    <section class="side side-left" aria-label="Първа творба">
-      <label class="picker" for="work-left">
-        <span class="picker-label">Първа творба</span>
-        <select id="work-left" name="work-left">
-          <option value="">Избери</option>
-        </select>
-      </label>
+    <section class="works-column" aria-label="Избрани творби">
+      <section class="side side-top" aria-label="Първа творба">
+        <label class="picker" for="work-left">
+          <span class="picker-label">Първа творба</span>
+          <select id="work-left" name="work-left">
+            <option value="">Избери</option>
+          </select>
+        </label>
 
-      <div id="left-card" class="work-card"></div>
+        <div id="left-card" class="work-card"></div>
+      </section>
+
+      <section class="side side-bottom" aria-label="Втора творба">
+        <label class="picker" for="work-right">
+          <span class="picker-label">Втора творба</span>
+          <select id="work-right" name="work-right">
+            <option value="">Избери</option>
+          </select>
+        </label>
+
+        <div id="right-card" class="work-card"></div>
+      </section>
     </section>
 
     <section class="bridge" aria-label="Връзка между творбите">
       <p id="connection-text" class="connection-text is-placeholder">Избери две различни творби.</p>
-    </section>
-
-    <section class="side side-right" aria-label="Втора творба">
-      <label class="picker" for="work-right">
-        <span class="picker-label">Втора творба</span>
-        <select id="work-right" name="work-right">
-          <option value="">Избери</option>
-        </select>
-      </label>
-
-      <div id="right-card" class="work-card"></div>
     </section>
   </main>
 
